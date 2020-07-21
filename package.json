@@ -80,7 +80,7 @@
   },
   "scripts": {
     "clean": "gatsby clean",
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build --prefix-path",
     "dev": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "serve": "gatsby serve",
