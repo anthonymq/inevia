@@ -2,21 +2,26 @@ import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-import { Container, Card } from "react-bootstrap";
+import { Container, Card, Row, Col } from "react-bootstrap";
 import Image from "components/Image";
 import "./ImageCard.scss";
 
-const ImageCard = ({ className, imageFileName, imageAlt, header, subheader, extraInfo }) => {
+const ImageCard = ({ className, imageFileName, imageLogo, imageAlt, header, subheader, extraInfo }) => {
   return (
     <Card className={clsx("image-card bg-dark text-white text-center", className)}>
       <Image className="image" fileName={imageFileName} alt={imageAlt || header || subheader} />
       <Card.ImgOverlay className="no-padding">
         <Container>
+          <Row className="justify-content-md-center">
+            <Col md="auto" className="intro-heading" ><Image className="logo" fileName={imageLogo} /></Col>
+          </Row>
           <div className="intro-text">
-            <div className="intro-lead-in">{subheader}</div>
-            <div className="intro-heading text-uppercase">{header}</div>
-            {extraInfo}
+            {subheader}
+            <div className="text-uppercase">
+              {header}
+            </div>
           </div>
+          {extraInfo}
         </Container>
       </Card.ImgOverlay>
     </Card>
@@ -26,6 +31,7 @@ const ImageCard = ({ className, imageFileName, imageAlt, header, subheader, extr
 ImageCard.propTypes = {
   className: PropTypes.string,
   imageFileName: PropTypes.string,
+  imageLogo: PropTypes.string,
   imageAlt: PropTypes.string,
   header: PropTypes.string,
   subheader: PropTypes.string,
@@ -35,6 +41,7 @@ ImageCard.propTypes = {
 ImageCard.defaultProps = {
   className: null,
   imageFileName: null,
+  imageLogo: null,
   imageAlt: null,
   header: "",
   subheader: "",

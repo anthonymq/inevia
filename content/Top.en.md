@@ -1,7 +1,8 @@
 ---
-header: "It's Nice To Meet You"
-subheader: "Welcome To Our Studio!"
-imageFileName: "header-bg.jpg"
-jumpToAnchor: "Services"
-jumpToAnchorText: "Tell Me More"
+header: "Maîtrise d'oeuvre, de la conception à la réalisation"
+#subheader: "Welcome To Our Studio!"
+imageFileName: "header-bg.png"
+imageLogo: "logo-inevia-signature-GA.jpg"
+jumpToAnchor: "La Société"
+jumpToAnchorText: "En savoir plus"
 ---

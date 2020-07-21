@@ -42,6 +42,7 @@ const MyNavbar = ({ anchors, frontmatter, extraItems }) => {
       expand="lg"
       fixed="top"
       expanded={expanded}
+      bg="dark"
     >
       <Container>
         <Navbar.Brand className="cursor-pointer" onClick={handleBrandClick}>

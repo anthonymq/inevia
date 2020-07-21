@@ -1,7 +1,10 @@
 ---
-anchor: "About"
-header: "About"
-subheader: "Lorem ipsum dolor sit amet consectetur."
+anchor: "La Société"
+header: "La société"
+# subheader: "Lorem ipsum dolor sit amet consectetur."
+content: "Notre société créée en juin 1992 est une société d’ingénierie et spécialisée dans différents domaines.<br/>
+Pour chacun des projets que nous menons, nous nous engageons à intégrer une démarche environnementale et à jouer pleinement de notre rôle d’ingénieur conseil sur toutes les étapes du projet.
+Forts de notre expérience, nous avons pour objectif d’être proches de nos clients, réactifs et soucieux de respecter nos engagements."
 timeline: [
   {
     imageFileName: "about/1.jpg",

@@ -43,6 +43,7 @@ export const query = graphql`
           header
           email
           imageFileName
+          imageLogo
           jumpToAnchor
           jumpToAnchorText
           menuText
@@ -59,6 +60,7 @@ export const query = graphql`
           services {
             content
             header
+            subHeader
             iconName
             imageFileName
           }

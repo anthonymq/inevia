@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Row, Col } from "react-bootstrap";
-import TimelineItem from "components/TimelineItem";
+// import TimelineItem from "components/TimelineItem";
 import SectionHeader from "components/SectionHeader";
 import PageSection from "components/PageSection";
-import nl2br from "utils/nl2br";
+// import nl2br from "utils/nl2br";
 
 import "./About.scss";
 
@@ -14,7 +14,11 @@ const About = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchor, header: rootHeader, subheader: rootSubHeader, timeline } = frontmatter;
+  const { anchor, 
+    header: rootHeader, 
+    subheader: rootSubHeader, 
+    // timeline, 
+    content: rootContent } = frontmatter;
 
   return (
     <PageSection className={className} id={anchor}>
@@ -23,7 +27,8 @@ const About = ({ className, frontmatter }) => {
       </Row>
       <Row>
         <Col lg={12}>
-          <ul className="timeline">
+          <div dangerouslySetInnerHTML={{ __html: rootContent }} />
+          {/* <ul className="timeline">
             {timeline.map(({ content, header, imageContent, imageFileName, subheader }, ind) => (
               <TimelineItem
                 invert={ind % 2 === 1}
@@ -39,7 +44,7 @@ const About = ({ className, frontmatter }) => {
                 }
               />
             ))}
-          </ul>
+          </ul> */}
         </Col>
       </Row>
     </PageSection>

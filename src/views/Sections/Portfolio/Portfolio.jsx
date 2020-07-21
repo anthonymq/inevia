@@ -40,6 +40,7 @@ const Portfolio = ({ className, frontmatter }) => {
             />
           ),
         )}
+       
       </Row>
     </PageSection>
   );

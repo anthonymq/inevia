@@ -8,12 +8,12 @@
     text-transform: uppercase;
     color: white !important;
     border: 0;
-    background-color: $primary;
+    // background-color: $primary;
     @include heading-font;
   }
   .navbar-brand {
-    color: $primary !important;
-    @include script-font;
+    color: white !important;
+    // @include script-font;
     &.active,
     &:active,
     &:focus,

@@ -1,13 +1,13 @@
 ---
-anchor: "Team"
-header: "Our Amazing Team"
-subheader: "Lorem ipsum dolor sit amet consectetur."
-content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
+anchor: "Equipe"
+header: "Notre équipe"
+subheader: ""
+content: "Nous intervenons partout en France."
 teamMember: [
   {
-    imageFileName: "team/1.jpg",
-    header: "Kay Garland",
-    subheader: "Lead Designer",
+    imageFileName: "team/entrepreneurs.png",
+    header: "Direction",
+    subheader: "",
     social: {
       twitter: "#",
       facebook: "#",
@@ -15,9 +15,9 @@ teamMember: [
     }
   },
   {
-    imageFileName: "team/2.jpg",
-    header: "Larry Parker",
-    subheader: "Lead Marketer",
+    imageFileName: "team/team_meeting.png",
+    header: "5 ingénieurs-chefs de projet",
+    subheader: "",
     social: {
       twitter: "#",
       facebook: "#",
@@ -25,14 +25,24 @@ teamMember: [
     }
   },
   {
-    imageFileName: "team/3.jpg",
-    header: "Diana Pertersen",
-    subheader: "Lead Developer",
+    imageFileName: "team/architect.png",
+    header: "5 dessinateurs",
+    subheader: "",
     social: {
       twitter: "#",
       facebook: "#",
       medium: "#"
     }
   },
+  {
+    imageFileName: "team/businesswoman.png",
+    header: "3 assistantes de gestion",
+    subheader: "",
+    social: {
+      twitter: "#",
+      facebook: "#",
+      medium: "#"
+    }
+  }
 ]
 ---
