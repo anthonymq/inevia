@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { StaticQuery, graphql } from "gatsby";
+import { withPrefix, StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 const Image = ({ fileName, alt, ...restProps }) => (
@@ -25,6 +25,7 @@ const Image = ({ fileName, alt, ...restProps }) => (
     `}
     render={(data) => {
       const image = data.images.edges.find((n) => n.node.relativePath.includes(fileName));
+      console.log("image", image);
 
       if (!image) {
         return null;
