@@ -1,5 +1,5 @@
 ---
-anchor: "Equipe"
+anchor: "Notre équipe"
 header: "Notre équipe"
 subheader: ""
 content: "Nous intervenons partout en France."
