@@ -1,11 +1,8 @@
 {
-  "name": "gatsby-startbootstrap-agency",
-  "description": "gatsby version of startbootstrap-agency with i18n support",
+  "name": "inevia",
+  "description": "inevia website",
   "version": "0.1.0",
-  "author": "thundermiracle",
-  "bugs": {
-    "url": "https://github.com/thundermiracle/gatsby-startbootstrap-agency/issues"
-  },
+  "author": "anthonymq",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
@@ -61,22 +58,24 @@
     "gatsby-plugin-eslint": "^2.0.8",
     "prettier": "^2.0.4"
   },
-  "homepage": "https://thundermiracle.github.io/gatsby-startbootstrap-agency",
+  "homepage": "https://inevia.pro/",
   "keywords": [
-    "gatsby",
-    "gatsbyjs",
-    "landing page",
-    "landing",
-    "i18n",
-    "eslint",
-    "bootstrap",
-    "startbootstrap-agency"
+    "Maitrise d'oeuvre",
+    "Bureau études",
+    "Voirie voiries",
+    "Assainissement",
+    "Vrd",
+    "Ingenierie",
+    "Bâtiment",
+    "Tours",
+    "Touraine",
+    "Tramway"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thundermiracle/gatsby-startbootstrap-agency.git"
+    "url": "git+https://github.com/anthonymq/inevia.git"
   },
   "scripts": {
     "clean": "gatsby clean",
