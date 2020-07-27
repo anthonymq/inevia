@@ -13,7 +13,7 @@ const ServiceItem = ({ iconName, imageFileName, header, subHeader, content }) =>
 
   let imagePart;
   if (imageFileName) {
-    imagePart = <Image className="service-item-image" fileName={imageFileName} />;
+    imagePart = <Image className="mx-auto circle rounded-circle" fileName={imageFileName} />;
   }
 
   return (
