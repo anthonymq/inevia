@@ -12,7 +12,7 @@ const Contact = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchor, header, subheader, telephone, email } = frontmatter;
+  const { anchor, header, subheader, telephone, email, embedMap } = frontmatter;
 
   return (
     <PageSection className={className} id={anchor}>
@@ -40,7 +40,9 @@ const Contact = ({ className, frontmatter }) => {
       <div className="space" />
       <Row>
         <Col>
-          <Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.234265260762!2d0.694522215622924!3d47.38786187917069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd44aa1c70a39%3A0xe5a187ee4bb0bbd9!2s19%20Rue%20%C3%89douard%20Vaillant%2C%2037000%20Tours!5e0!3m2!1sfr!2sfr!4v1591948273294!5m2!1sfr!2sfr"
+        
+          <Iframe 
+            url={embedMap}
             width="100%"
             height="450px"
             id="myId"
