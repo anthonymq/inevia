@@ -13,7 +13,9 @@ const ImageCard = ({ className, imageFileName, imageLogo, imageAlt, header, subh
       <Card.ImgOverlay className="no-padding">
         <Container>
           <Row className="justify-content-md-center">
-            <Col md="auto" className="intro-heading" ><Image className="logo" fileName={imageLogo} /></Col>
+            <Col md="12" className="intro-heading" >
+            <Image className="logo" fileName={imageLogo} />
+            </Col>
           </Row>
           <div className="intro-text">
             {subheader}

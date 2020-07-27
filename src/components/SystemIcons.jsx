@@ -3,6 +3,7 @@ import makeFAIcon from "utils/makeFAIcon";
 import {
   faPhone,
   faEnvelope,
+  faAt,
   faPlus,
   faBars,
   faTimes,
@@ -18,6 +19,7 @@ import {
 
 export const PhoneIcon = makeFAIcon(faPhone);
 export const EnvelopIcon = makeFAIcon(faEnvelope);
+export const AtIcon = makeFAIcon(faAt);
 export const PlusIcon = makeFAIcon(faPlus);
 export const BarsIcon = makeFAIcon(faBars);
 export const GithubIcon = makeFAIcon(faGithubAlt);

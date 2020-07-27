@@ -43,6 +43,7 @@ export const query = graphql`
           header
           email
           embedMap
+          adresse
           imageFileName
           imageLogo
           jumpToAnchor

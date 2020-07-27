@@ -12,7 +12,7 @@ const Contact = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchor, header, subheader, telephone, email, embedMap } = frontmatter;
+  const { anchor, header, subheader, telephone, email, adresse, embedMap } = frontmatter;
 
   return (
     <PageSection className={className} id={anchor}>
@@ -31,16 +31,19 @@ const Contact = ({ className, frontmatter }) => {
           </a>
         </Col>
         <Col lg={4} className="mr-auto text-center">
-          <Icon iconName="EnvelopIcon" size="3x" className="text-muted mb-3" />
+          <Icon iconName="AtIcon" size="3x" className="text-muted mb-3" />
           <a className="d-block" href={`mailto:${email}`}>
             {email}
           </a>
+        </Col>
+        <Col lg={4} className="mr-auto text-center">
+          <Icon iconName="EnvelopIcon" size="3x" className="text-muted mb-3" />
+          <p className="d-block" dangerouslySetInnerHTML={{ __html: adresse }} />
         </Col>
       </Row>
       <div className="space" />
       <Row>
         <Col>
-        
           <Iframe 
             url={embedMap}
             width="100%"
