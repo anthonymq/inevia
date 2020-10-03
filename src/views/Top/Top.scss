@@ -1,0 +1,8 @@
+.anchorButton {
+    visibility: hidden;
+}
+@media (min-width: 768px) {
+    .anchorButton {
+        visibility: visible;
+    }
+}
