@@ -20,7 +20,7 @@ const ImageCard = ({ className, imageFileName, imageLogo, imageAlt, header, subh
           <div className="intro-text">
             {subheader}
             <div className="text-uppercase">
-              {header}
+            <div dangerouslySetInnerHTML={{ __html: header }} />
             </div>
           </div>
           {extraInfo}

@@ -1,19 +1,19 @@
 ---
 clients: [
   {
-    imageFileName: "logos/envato.jpg",
+    imageFileName: "logos/logo_saint-cyr-sur-loire.png",
     href: "#!"
   },
   {
-    imageFileName: "logos/designmodo.jpg",
+    imageFileName: "logos/semdo.jpg",
     href: "#!"
   },
   {
-    imageFileName: "logos/themeforest.jpg",
+    imageFileName: "logos/laset.jpg",
     href: "#!"
   },
   {
-    imageFileName: "logos/creative-market.jpg",
+    imageFileName: "logos/tours-metropole.jpg",
     href: "#!"
   }
 ]

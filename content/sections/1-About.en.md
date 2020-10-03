@@ -2,7 +2,7 @@
 anchor: "La Société"
 header: "La société"
 # subheader: "Lorem ipsum dolor sit amet consectetur."
-content: "Notre société créée en juin 1992 est une société d’ingénierie et spécialisée dans différents domaines.<br/>
+content: "INEVIA, installée en Touraine depuis presque 30ans, est un bureau d'études spécialisé dans l'ingénierie des VRD et des aménagements urbains.<br/>
 Pour chacun des projets que nous menons, nous nous engageons à intégrer une démarche environnementale et à jouer pleinement de notre rôle d’ingénieur conseil sur toutes les étapes du projet.
 Forts de notre expérience, nous avons pour objectif d’être proches de nos clients, réactifs et soucieux de respecter nos engagements."
 timeline: [

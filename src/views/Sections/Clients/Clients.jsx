@@ -15,6 +15,7 @@ const Clients = ({ className, frontmatter }) => {
 
   return (
     <PageSection className={clsx("py-5", className)} id={anchor}>
+      <Row>Ils nous font confiance</Row>
       <Row>
         {clients.map(({ href, imageFileName }) => (
           <Col md={3} sm={6} className="my-3" key={imageFileName}>

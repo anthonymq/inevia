@@ -8,8 +8,8 @@ portfolios: [
     imageFileNameDetail: "portfolio/FicheVrdBourges.jpg",
     header: "Construction",
     subheader: "Maison de la Culture à Bourges",
-    content: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-    extraInfo: ["Date: January 2017", "Client: Threads", "Category: Illustration"]
+    content: "",
+    extraInfo: []
   },
   {
     imageFileName: "portfolio/FicheVrdMlp.jpg",
