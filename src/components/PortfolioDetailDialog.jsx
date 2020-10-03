@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Modal, Button } from "react-bootstrap";
 import Image from "components/Image";
 import Icon from "./Icon";
+import "./PortfolioDetailDialog.scss";
 
 const PortfolioDetailDialog = ({
   onHide,
@@ -12,7 +13,6 @@ const PortfolioDetailDialog = ({
   header,
   subheader,
   content,
-  extraInfo,
   ...restProps
 }) => {
   return (
@@ -29,12 +29,11 @@ const PortfolioDetailDialog = ({
       <Modal.Body className="mx-auto">
         <p className="item-intro text-muted">{subheader}</p>
         <Image
-          className="img-fluid d-block"
+          className="img-fluid d-block img-dialog"
           fileName={imageFileName}
           alt={imageAlt || header || subheader}
         />
         <p>{content}</p>
-        {extraInfo}
       </Modal.Body>
       <Modal.Footer>
         <div className="mx-auto">
@@ -55,7 +54,6 @@ PortfolioDetailDialog.propTypes = {
   header: PropTypes.string,
   subheader: PropTypes.string,
   content: PropTypes.string,
-  extraInfo: PropTypes.any,
 };
 
 PortfolioDetailDialog.defaultProps = {
@@ -65,7 +63,6 @@ PortfolioDetailDialog.defaultProps = {
   header: "",
   subheader: "",
   content: "",
-  extraInfo: null,
 };
 
 export default PortfolioDetailDialog;
