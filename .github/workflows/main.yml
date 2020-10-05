@@ -11,12 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2.1.1
+        env: 
+          NPM_CONFIG_ARGS: --prefix-paths
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
-          gatsby-args: --args='--prefix-paths'
       - uses: enriikke/gatsby-gh-pages-action@v2.1.1
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: prod
-          gatsby-args: --
