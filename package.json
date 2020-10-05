@@ -79,7 +79,7 @@
   },
   "scripts": {
     "clean": "gatsby clean",
-    "build": "gatsby clean && gatsby build $npm_config_args",
+    "build": "gatsby clean && gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "serve": "gatsby serve",
