@@ -11,7 +11,7 @@ const Clients = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchor, clients, header } = frontmatter;
+  const { clients, header } = frontmatter;
 
   return (
     <PageSection className={clsx("py-5", className)} id={header}>
