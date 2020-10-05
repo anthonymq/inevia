@@ -25,7 +25,7 @@ module.exports = {
         background_color: "#ffffff",
         theme_color: "#fed136",
         display: "minimal-ui",
-        icon: "content/assets/logo-inevia-mini.jpg",
+        icon: "content/assets/logo-inevia-signature-GA.jpg",
       },
     },
     "gatsby-transformer-remark",
