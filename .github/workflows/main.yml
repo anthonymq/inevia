@@ -19,4 +19,4 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: prod
-          gatsby-args: 
+          gatsby-args: --no-color
