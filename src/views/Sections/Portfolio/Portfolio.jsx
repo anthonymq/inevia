@@ -23,6 +23,12 @@ const Portfolio = ({ className, frontmatter }) => {
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
+      <Row className="text-center">
+        <Col>
+        <Button variant="outline-dark" href={rail}><Icon iconName="DownloadIcon" /> Télécharger nos références Rail et Tramway</Button>
+        </Col>
+        <Col><Button variant="outline-dark" href={vrd}><Icon iconName="DownloadIcon" /> Télécharger nos références VRD</Button></Col>
+      </Row>
       <Row>
         {portfolios.map(
           ({ content, header, imageFileName, imageFileNameDetail, subheader }) => (
@@ -37,12 +43,6 @@ const Portfolio = ({ className, frontmatter }) => {
           ),
         )}
        
-      </Row>
-      <Row className="text-center">
-        <Col>
-        <Button variant="outline-dark" href={rail}><Icon iconName="DownloadIcon" /> Télécharger nos références Rail et Tramway</Button>
-        </Col>
-        <Col><Button variant="outline-dark" href={vrd}><Icon iconName="DownloadIcon" /> Télécharger nos références VRD</Button></Col>
       </Row>
     </PageSection>
   );
