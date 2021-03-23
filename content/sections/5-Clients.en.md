@@ -23,9 +23,6 @@ clients: [
     imageFileName: "logos/AEROPORT-DE-PARIS.png",
     href: "https://www.parisaeroport.fr/"
   },{
-    imageFileName: "logos/ATARAXIA.png",
-    href: "https://www.ataraxiapromotion.fr/fr/accueil.html"
-  },{
     imageFileName: "logos/BOUYGUES-IMMOBILIER.png",
     href: "https://www.bouygues-immobilier.com/"
   },{

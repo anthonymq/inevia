@@ -22,7 +22,7 @@ const Clients = ({ className, frontmatter }) => {
       </Row>
       <Row>
         {clients.map(({ href, imageFileName }) => (
-          <Col md={3} sm={6} className="my-3" key={imageFileName}>
+          <Col className="col-2 my-3" key={imageFileName}>
             <Client href={href} imageFileName={imageFileName} />
           </Col>
         ))}
