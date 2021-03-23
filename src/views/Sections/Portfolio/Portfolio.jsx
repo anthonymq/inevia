@@ -24,10 +24,8 @@ const Portfolio = ({ className, frontmatter }) => {
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
       <Row className="text-center">
-        <Col>
-        <Button variant="outline-dark" href={rail}><Icon iconName="DownloadIcon" /> Télécharger nos références Rail et Tramway</Button>
-        </Col>
         <Col><Button variant="outline-dark" href={vrd}><Icon iconName="DownloadIcon" /> Télécharger nos références VRD</Button></Col>
+        <Col><Button variant="outline-dark" href={rail}><Icon iconName="DownloadIcon" /> Télécharger nos références Rail et Tramway</Button></Col>
       </Row>
       <Row>
         {portfolios.map(

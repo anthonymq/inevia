@@ -4,34 +4,26 @@ header: "Nos références"
 # subheader: "Lorem ipsum dolor sit amet consectetur."
 portfolios: [
   {
-    imageFileName: "portfolio/FicheVrdBourges.jpg",
-    imageFileNameDetail: "portfolio/FicheVrdBourges.jpg",
+    imageFileName: "portfolio/CONSTRUCTION.png",
+    imageFileNameDetail: "portfolio/CONSTRUCTION.png",
     header: "Construction",
     subheader: "Maison de la Culture à Bourges",
     content: "",
     extraInfo: []
   },
   {
-    imageFileName: "portfolio/FicheVrdMlp.jpg",
-    imageFileNameDetail: "portfolio/FicheVrdMlp.jpg",
+    imageFileName: "portfolio/ZAC.jpg",
+    imageFileNameDetail: "portfolio/ZAC.jpg",
     header: "Aménagement ZAC",
     subheader: "Ménardière-Lande-Pinauderie à Saint-Cyr-Sur-Loire",
     content: "",
     extraInfo: []
   },
   {
-    imageFileName: "portfolio/FicheRailMarseille.jpg",
-    imageFileNameDetail: "portfolio/FicheRailMarseille.jpg",
-    header: "Rail",
-    subheader: "Réfection des voies de Marseille à Aubagne",
-    content: "",
-    extraInfo: []
-  },
-  {
-    imageFileName: "portfolio/FicheTramTours.jpg",
-    imageFileNameDetail: "portfolio/FicheTramTours.jpg",
-    header: "Tramway",
-    subheader: "Première ligne de Tours",
+    imageFileName: "portfolio/TRAMWAY.png",
+    imageFileNameDetail: "portfolio/TRAMWAY.png",
+    header: "Rail et Tramway",
+    subheader: "Première ligne de tramway de Tours",
     content: "",
     extraInfo: []
   },
