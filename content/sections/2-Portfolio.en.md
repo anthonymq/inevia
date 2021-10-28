@@ -21,8 +21,8 @@ portfolios: [
     extraInfo: []
   },
   {
-    imageFileName: "portfolio/TRAMWAY.png",
-    imageFileNameDetail: "portfolio/TRAMWAY.png",
+    imageFileName: "portfolio/tram-resized.png",
+    imageFileNameDetail: "portfolio/tram-resized.png",
     header: "Rail et Tramway",
     # subheader: "Première ligne de tramway de Tours",
     subheader: "",
