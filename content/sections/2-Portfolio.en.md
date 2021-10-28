@@ -3,19 +3,20 @@ anchor: "Nos références"
 header: "Nos références"
 # subheader: "Lorem ipsum dolor sit amet consectetur."
 portfolios: [
-  {
-    imageFileName: "portfolio/CONSTRUCTION.png",
-    imageFileNameDetail: "portfolio/CONSTRUCTION.png",
-    header: "Construction",
-    subheader: "Maison de la Culture à Bourges",
-    content: "",
-    extraInfo: []
-  },
+  # {
+  #   imageFileName: "portfolio/CONSTRUCTION.png",
+  #   imageFileNameDetail: "portfolio/CONSTRUCTION.png",
+  #   header: "Construction",
+  #   subheader: "Maison de la Culture à Bourges",
+  #   content: "",
+  #   extraInfo: []
+  # },
   {
     imageFileName: "portfolio/ZAC.jpg",
     imageFileNameDetail: "portfolio/ZAC.jpg",
-    header: "Aménagement ZAC",
-    subheader: "Ménardière-Lande-Pinauderie à Saint-Cyr-Sur-Loire",
+    header: "Voirie Réseaux Divers",
+    subheader: "",
+    # subheader: "Ménardière-Lande-Pinauderie à Saint-Cyr-Sur-Loire",
     content: "",
     extraInfo: []
   },
@@ -23,7 +24,8 @@ portfolios: [
     imageFileName: "portfolio/TRAMWAY.png",
     imageFileNameDetail: "portfolio/TRAMWAY.png",
     header: "Rail et Tramway",
-    subheader: "Première ligne de tramway de Tours",
+    # subheader: "Première ligne de tramway de Tours",
+    subheader: "",
     content: "",
     extraInfo: []
   },

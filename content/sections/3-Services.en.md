@@ -22,8 +22,7 @@ services: [
     header: "Maîtrise d'oeuvre de conception",
     content: "Projets routiers, parc d'activités, quartiers d'habitats, éco quartiers, ZAC, centre de tri et de transfert de déchets, réseaux électriques, réseaux de télécommunications, éclairage public,
 assainissement eaux usées et pluviales,
-aduction eau potable,
-réseaux de chaleur"
+aduction eau potable"
   },
   {
     # iconName: "LockIcon",
