@@ -11,9 +11,9 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId,
+        trackingIds: [trackingId],
       },
     },
     {
@@ -43,7 +43,6 @@ module.exports = {
         path: `${__dirname}/content/assets/images`,
       },
     },
-    "gatsby-plugin-eslint",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
@@ -51,8 +50,10 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sass",
       options: {
-        data: `@import "core.scss";`,
-        includePaths: [path.resolve(__dirname, "src/style")],
+        additionalData: `@import "core.scss";`,
+        sassOptions: {
+          includePaths: [path.resolve(__dirname, "src/style")],
+        },
       },
     },
     {
@@ -63,15 +64,7 @@ module.exports = {
           `Kaushan+Script`,
           `Droid+Serif\:400, 700, 400italic, 700italic`,
         ],
-        display: 'swap'
-      },
-    },
-    {
-      resolve: "gatsby-plugin-i18n",
-      options: {
-        langKeyDefault: defaultLang,
-        useLangKeyLayout: false,
-        pagesPaths: ["/content/"],
+        display: "swap",
       },
     },
   ],

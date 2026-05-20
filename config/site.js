@@ -14,10 +14,13 @@ module.exports = {
     "réseau réseaux",
     "AEP adduction eau potable",
     "EP eau potable",
-    "EU eau usée"
+    "EU eau usée",
   ],
   description: "Inevia ingenierie environnement et route",
   author: "anthonymq",
   trackingId: "UA-179586824-1",
   defaultLang: "en",
+  langTextMap: {
+    en: "English",
+  },
 };

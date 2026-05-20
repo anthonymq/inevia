@@ -2,6 +2,19 @@ const path = require("path");
 const getBaseUrl = require("./src/utils/getBaseUrl");
 const { defaultLang, langTextMap = {} } = require("./config/site");
 
+function getMarkdownFileInfo(fileAbsolutePath) {
+  const parsedPath = path.parse(fileAbsolutePath);
+  const parts = parsedPath.name.split(".");
+  const langKey = parts.length > 1 ? parts.pop() : defaultLang;
+  const fileName = parts.join(".") || parsedPath.name;
+
+  return {
+    fileName,
+    langKey,
+    directoryName: path.basename(parsedPath.dir),
+  };
+}
+
 /**
  * add fileName to node for markdown files
  */
@@ -9,7 +22,8 @@ exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === "MarkdownRemark") {
-    const fileName = path.basename(node.fileAbsolutePath, ".md");
+    const { fileName, langKey, directoryName } = getMarkdownFileInfo(node.fileAbsolutePath);
+
     createNodeField({
       node,
       name: "fileName",
@@ -18,8 +32,14 @@ exports.onCreateNode = ({ node, actions }) => {
 
     createNodeField({
       node,
+      name: "langKey",
+      value: langKey,
+    });
+
+    createNodeField({
+      node,
       name: "directoryName",
-      value: path.basename(path.dirname(node.fileAbsolutePath)),
+      value: directoryName,
     });
   }
 };
@@ -37,16 +57,41 @@ exports.createSchemaCustomization = ({ actions }) => {
       jumpToAnchorText: String
       social: Social
       services: [Service]
+      portfolios: [Portfolio]
+      clients: [Client]
+      timeline: [TimelineItem]
       teamMember: [TeamMember]
     }`,
+    `type Portfolio {
+      imageFileName: String
+      imageFileNameDetail: String
+      header: String
+      subheader: String
+      content: String
+    }`,
+    `type Client {
+      href: String
+      imageFileName: String
+    }`,
     `type TeamMember {
+      header: String
+      imageFileName: String
+      subheader: String
       social: Social
     }`,
     `type Service {
       iconName: String
       imageFileName: String
       header: String
+      subHeader: String
       content: String
+    }`,
+    `type TimelineItem {
+      content: String
+      header: String
+      imageContent: String
+      imageFileName: String
+      subheader: String
     }`,
     `
     type Social {
@@ -68,36 +113,29 @@ exports.createSchemaCustomization = ({ actions }) => {
 exports.createPages = ({ graphql, actions: { createPage } }) => {
   const topIndex = path.resolve("./src/templates/top-index.jsx");
 
-  return new Promise((resolve, reject) => {
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark {
-              distinct(field: fields___langKey)
-            }
-          }
-        `,
-      ).then(({ errors, data }) => {
-        if (errors) {
-          console.log(errors);
-          reject(errors);
-        }
+  return graphql(`
+    {
+      allMarkdownRemark {
+        distinct(field: { fields: { langKey: SELECT } })
+      }
+    }
+  `).then(({ errors, data }) => {
+    if (errors) {
+      throw errors;
+    }
 
-        data.allMarkdownRemark.distinct.forEach((langKey) => {
-          createPage({
-            path: getBaseUrl(defaultLang, langKey),
-            component: topIndex,
-            context: {
-              langKey,
-              defaultLang,
-              langTextMap,
-            },
-          });
-        });
+    data.allMarkdownRemark.distinct.forEach((langKey) => {
+      createPage({
+        path: getBaseUrl(defaultLang, langKey),
+        component: topIndex,
+        context: {
+          langKey,
+          defaultLang,
+          langTextMap,
+        },
+      });
+    });
 
-        return null;
-      }),
-    );
+    return null;
   });
 };

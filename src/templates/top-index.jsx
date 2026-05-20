@@ -28,7 +28,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       filter: { fields: { langKey: { eq: $langKey } } }
-      sort: { order: ASC, fields: [fields___directoryName, fields___fileName] }
+      sort: [{ fields: { directoryName: ASC } }, { fields: { fileName: ASC } }]
     ) {
       nodes {
         frontmatter {
@@ -106,7 +106,7 @@ export const query = graphql`
   }
 `;
 
-const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } }) => {
+const IndexPage = ({ data, pageContext: { langKey, defaultLang, langTextMap } }) => {
   const {
     site: {
       siteMetadata: { keywords, description },
@@ -154,11 +154,11 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap } })
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
-  pathContext: PropTypes.object,
+  pageContext: PropTypes.object,
 };
 
 IndexPage.defaultProps = {
-  pathContext: {
+  pageContext: {
     langKey: "en",
     defaultLang: "en",
     langTextMap: {},

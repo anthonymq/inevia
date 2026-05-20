@@ -1,12 +1,19 @@
 {
-  "parser": "babel-eslint",
-  "extends": ["airbnb", "plugin:react/recommended", "prettier", "prettier/react"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "configFile": "./babel.config.js"
+    }
+  },
+  "extends": ["airbnb", "plugin:react/recommended", "prettier"],
   "plugins": ["react-hooks"],
   "env": {
     "browser": true,
     "es6": true,
     "node": true,
-    "worker": true
+    "worker": true,
+    "es2021": true
   },
   "rules": {
     "arrow-body-style": 0,
@@ -24,6 +31,7 @@
     "no-irregular-whitespace": 0,
     "no-param-reassign": 0,
     "no-restricted-globals": 0,
+    "no-restricted-exports": 0,
     "no-underscore-dangle": 0,
     "no-unused-vars": 1,
     "object-curly-spacing": 0,
@@ -37,6 +45,7 @@
     "react/jsx-no-bind": 2,
     "react/jsx-one-expression-per-line": 0,
     "react/no-danger": 0,
+    "react/function-component-definition": 0,
     "react/prefer-stateless-function": 1,
     "react/prop-types": 2,
     "react/react-in-jsx-scope": 0,
@@ -45,6 +54,9 @@
     "react-hooks/exhaustive-deps": 2
   },
   "settings": {
+    "react": {
+      "version": "detect"
+    },
     "import/resolver": {
       "babel-module": {
         "root": ["./"]
