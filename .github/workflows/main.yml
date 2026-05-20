@@ -13,15 +13,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: enriikke/gatsby-gh-pages-action@v2.2.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build prefixed site
         env:
           PREFIX_PATHS: true
+        run: npm run build -- --prefix-paths
+
+      - name: Deploy gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-branch: gh-pages
-          gatsby-args: --
-      - uses: enriikke/gatsby-gh-pages-action@v2.2.1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          force_orphan: true
+
+      - name: Build production site
+        run: npm run build
+
+      - name: Deploy prod
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-branch: prod
-          gatsby-args: --
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: prod
+          force_orphan: true
