@@ -4,7 +4,7 @@ header: "La société"
 # subheader: "Lorem ipsum dolor sit amet consectetur."
 content: "
 <p>
-<strong>INEVIA</strong>, installée en Touraine depuis presque 30ans, est un bureau d'études spécialisé dans l'ingénierie des VRD et des aménagements urbains.
+<strong>INEVIA</strong>, test installée en Touraine depuis presque 30ans, est un bureau d'études spécialisé dans l'ingénierie des VRD et des aménagements urbains.
 </p>
 <p>
 Pour chacun des projets que nous menons, nous nous engageons à intégrer une démarche environnementale et à jouer pleinement de notre rôle d’ingénieur conseil sur toutes les étapes du projet.
