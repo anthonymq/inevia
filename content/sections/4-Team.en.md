@@ -16,7 +16,7 @@ teamMember: [
   },
   {
     imageFileName: "team/team_meeting.png",
-    header: "2 Ingénieurs-chefs de projet",
+    header: "1 Ingénieur-chef de projet",
     subheader: "",
     social: {
       twitter: "#",
@@ -26,7 +26,7 @@ teamMember: [
   },
   {
     imageFileName: "team/architect.png",
-    header: "2 Dessinateurs",
+    header: "1 Dessinateur",
     subheader: "",
     social: {
       twitter: "#",
@@ -36,7 +36,7 @@ teamMember: [
   },
   {
     imageFileName: "team/businesswoman.png",
-    header: "2 Assistantes de gestion",
+    header: "1 Assistante de gestion",
     subheader: "",
     social: {
       twitter: "#",
