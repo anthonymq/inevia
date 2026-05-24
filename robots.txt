@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://inevia.pro/sitemap-index.xml
+Host: https://inevia.pro

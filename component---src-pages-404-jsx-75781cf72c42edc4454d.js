@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkinevia=self.webpackChunkinevia||[]).push([[415],{3729:function(e,t,n){n.r(t);var a=n(6540),l=n(6593);t.default=()=>a.createElement(a.Fragment,null,a.createElement(l.A,{title:"Page non trouvee",description:"La page demandee est introuvable.",pathname:"/404",robots:"noindex, nofollow"}),a.createElement("h1",null,"NOT FOUND"),a.createElement("p",null,"You just hit a route that doesn't exist... the sadness."))}}]);
+//# sourceMappingURL=component---src-pages-404-jsx-75781cf72c42edc4454d.js.map
