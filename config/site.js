@@ -1,5 +1,7 @@
 module.exports = {
   title: "Inevia",
+  siteUrl: "https://inevia.pro",
+  siteName: "Inevia",
   keywords: [
     "Maitrise d'oeuvre",
     "Bureau études",
@@ -16,11 +18,25 @@ module.exports = {
     "EP eau potable",
     "EU eau usée",
   ],
-  description: "Inevia ingenierie environnement et route",
+  description:
+    "Inevia, bureau d'etudes en ingenierie VRD, amenagements urbains et maitrise d'oeuvre a Montlouis-sur-Loire, pres de Tours.",
   author: "anthonymq",
   trackingId: "UA-179586824-1",
   defaultLang: "en",
   langTextMap: {
-    en: "English",
+    en: "Francais",
+  },
+  contentLang: "fr",
+  socialImage: "/logo-inevia-signature-GA.jpg",
+  organization: {
+    name: "Inevia",
+    email: "inevia@inevia.pro",
+    telephone: "+33247413371",
+    address: {
+      streetAddress: "9 Quai de la Gare",
+      postalCode: "37270",
+      addressLocality: "Montlouis-sur-Loire",
+      addressCountry: "FR",
+    },
   },
 };

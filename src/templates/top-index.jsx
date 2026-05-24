@@ -12,6 +12,7 @@ import LanguageSelector from "components/LanguageSelector";
 import "utils/fixFontAwesome";
 import breakDownAllNodes from "utils/breakDownAllNodes";
 import fileNameToSectionName from "utils/fileNameToSectionName";
+import getBaseUrl from "utils/getBaseUrl";
 
 import "../style/main.scss";
 
@@ -22,8 +23,11 @@ export const query = graphql`
   query IndexQuery($langKey: String!) {
     site {
       siteMetadata {
+        title
         keywords
         description
+        siteUrl
+        lang
       }
     }
     allMarkdownRemark(
@@ -109,12 +113,31 @@ export const query = graphql`
 const IndexPage = ({ data, pageContext: { langKey, defaultLang, langTextMap } }) => {
   const {
     site: {
-      siteMetadata: { keywords, description },
+      siteMetadata: { title, keywords, description, siteUrl, lang: contentLang },
     },
     allMarkdownRemark: { nodes },
   } = data;
 
   const { topNode, navBarNode, anchors, footerNode, sectionsNodes } = breakDownAllNodes(nodes);
+  const pagePath = getBaseUrl(defaultLang, langKey);
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: title,
+    url: new URL(pagePath, siteUrl).toString(),
+    image: new URL("/logo-inevia-signature-GA.jpg", siteUrl).toString(),
+    description,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "9 Quai de la Gare",
+      postalCode: "37270",
+      addressLocality: "Montlouis-sur-Loire",
+      addressCountry: "FR",
+    },
+    email: "inevia@inevia.pro",
+    telephone: "+33247413371",
+    areaServed: "Tours et la Touraine",
+  };
 
   let langSelectorPart;
   if (langTextMap != null && Object.keys(langTextMap).length > 1) {
@@ -125,7 +148,15 @@ const IndexPage = ({ data, pageContext: { langKey, defaultLang, langTextMap } })
 
   return (
     <>
-      <SEO lang={langKey} title="Inevia" keywords={keywords} description={description} />
+      <SEO
+        lang={contentLang}
+        title="Inevia"
+        keywords={keywords}
+        description={description}
+        pathname={pagePath}
+        image="/logo-inevia-signature-GA.jpg"
+        schemaMarkup={organizationSchema}
+      />
       <Navbar
         anchors={anchors}
         frontmatter={navBarNode.frontmatter}

@@ -1,5 +1,15 @@
 const path = require("path");
-const { title, keywords, description, author, defaultLang, trackingId } = require("./config/site");
+const {
+  title,
+  keywords,
+  description,
+  author,
+  defaultLang,
+  contentLang,
+  trackingId,
+  siteUrl,
+  socialImage,
+} = require("./config/site");
 
 module.exports = {
   pathPrefix: `/inevia`,
@@ -8,6 +18,9 @@ module.exports = {
     keywords,
     description,
     author,
+    siteUrl,
+    lang: contentLang,
+    image: socialImage,
   },
   plugins: [
     {
@@ -28,6 +41,12 @@ module.exports = {
         icon: "content/assets/logo-inevia-signature-GA.jpg",
       },
     },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        excludes: ["/404", "/404.html", "/dev-404-page", "/offline-plugin-app-shell-fallback"],
+      },
+    },
     "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
@@ -44,6 +63,14 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap-index.xml`,
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-offline",
